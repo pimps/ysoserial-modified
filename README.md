@@ -5,11 +5,11 @@ Thats a fork of the original ysoserial application that can be found here: [http
 
 ## Description of the Modification
 
-Due how `Runtime.getRuntime().exec(String.class)` works in java, nested and complex commands where you'll need control pipes or send the output to files (ex: cat /etc/passwd > /tmp/passwd_copy) will not work because the command isn't executed inside of a terminal environment. One possible hack is execute "/bin/sh -c 'command'" but you'll need escape spaces on the command to be executed using ${IFS} or it will not work as expected. For more details please read that [this blopost](http://codewhitesec.blogspot.com.au/2015/03/sh-or-getting-shell-environment-from.html) that will go deep on the details.
+Due how `Runtime.getRuntime().exec(String.class)` works in java, nested and complex commands where you'll need control pipes or send the output to files (ex: cat /etc/passwd > /tmp/passwd_copy) will not work because the command executed by the exec() method from the Runtime class isn't executed inside of a terminal environment. One possible hack is execute "/bin/sh -c 'command'" but you'll need escape the space charater on the 'command' using ${IFS} or it will not work as expected. For more details about that problem and possible workaround please read [this blopost](http://codewhitesec.blogspot.com.au/2015/03/sh-or-getting-shell-environment-from.html) that will go deep on the details.
 
-To fix that problem, arguments should be passed to the method `Runtime.getRuntime().exec(String[].class)` that expects an array of Strings.
+A good solution to fix that problem is pass the arguments to the method `Runtime.getRuntime().exec(String[].class)` that expects an array of Strings. The best option is execute the following: `Runtime.getRuntime().exec("/bin/sh", "-c", "command")`. Passing the arguments that way, java will understand that you're executing the /bin/bash passing the arguments -c and 'command' on the correct way and will execute your command inside of an terminal environment, what you allow you use nested or complex commands and also control inputs and outputs.
 
-So I added a functionality where you give the type of the terminal that you want use to create the command (cmd / bash / powershell / none) and my modification will execute your command inside of that terminal context allowing you to execute any complex command.
+Knowing that I added a functionality to ysoserial where you give the type of the terminal that you want use to execute your command (cmd / bash / powershell or none) and my modification will execute your command inside of that terminal context allowing you to execute any complex command as it should work!
 
 ## Usage
 
