@@ -41,8 +41,10 @@ To compile it by yourself:
 
 Require Java 1.7+ and Maven 3.x+
 
-git clone https://github.com/pimps/ysoserial-modified.git
-cd ysoserial-modified
-mvn clean package -DskipTests
+```shell
+$ git clone https://github.com/pimps/ysoserial-modified.git
+$ cd ysoserial-modified
+$ mvn clean package -DskipTests
+```
 
 The jar file will be located on the target directory
