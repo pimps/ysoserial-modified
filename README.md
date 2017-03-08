@@ -33,3 +33,16 @@ Usage: java -jar ysoserial-[version]-all.jar [payload type] [terminal type: cmd 
 		Hibernate1 []
 ...
 ```
+## Download / Install
+
+Download the compiled jar from the /target directory on this repository or just [click here](https://github.com/pimps/ysoserial-modified/raw/master/target/ysoserial-modified.jar)
+
+To compile it by yourself:
+
+Require Java 1.7+ and Maven 3.x+
+
+git clone https://github.com/pimps/ysoserial-modified.git
+cd ysoserial-modified
+mvn clean package -DskipTests
+
+The jar file will be located on the target directory
