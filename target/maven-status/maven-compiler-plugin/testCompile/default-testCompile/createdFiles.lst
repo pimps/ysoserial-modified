@@ -9,8 +9,8 @@ ysoserial/payloads/MyfacesTest$MyfacesDeserializer$MockRequestContext.class
 ysoserial/payloads/TestHarnessTest$ExecMockPayload.class
 ysoserial/payloads/TestHarnessTest.class
 ysoserial/payloads/MyfacesTest$MyfacesDeserializer.class
-ysoserial/payloads/MyfacesTest$MyfacesDeserializer$MockELResolver.class
 ysoserial/WrappedTest.class
+ysoserial/payloads/MyfacesTest$MyfacesDeserializer$MockELResolver.class
 ysoserial/CustomDeserializer.class
 ysoserial/payloads/RemoteClassLoadingTest.class
 ysoserial/CustomTest.class
@@ -19,8 +19,8 @@ ysoserial/payloads/MyfacesTest$1.class
 ysoserial/payloads/JRMPReverseConnectTest.class
 ysoserial/payloads/RemoteClassLoadingTest$Exploit.class
 ysoserial/payloads/TestHarnessTest$ExecMockSerializable.class
-ysoserial/payloads/FileUploadTest.class
 ysoserial/payloads/JRMPReverseConnectSMTest$1.class
+ysoserial/payloads/FileUploadTest.class
 ysoserial/CustomPayloadArgs.class
 ysoserial/payloads/PayloadsTest$1.class
 ysoserial/Throwables.class
