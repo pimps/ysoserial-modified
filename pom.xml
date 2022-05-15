@@ -100,7 +100,7 @@
 		<repository>
 			<id>jenkins</id>
 			<layout>default</layout>
-			<url>http://repo.jenkins-ci.org/public/</url>
+			<url>https://repo.jenkins-ci.org/artifactory/public/</url>
 		</repository>
 	</repositories>
 
