@@ -100,7 +100,7 @@
 		<repository>
 			<id>jenkins</id>
 			<layout>default</layout>
-			<url>http://repo.jenkins-ci.org/public/</url>
+			<url>https://repo.jenkins-ci.org/artifactory/public/</url>
 		</repository>
 	</repositories>
 
@@ -157,6 +157,11 @@
 			<artifactId>commons-codec</artifactId>
 			<version>1.9</version>
 		</dependency>
+		<dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
 		<dependency>
 			<artifactId>remoting</artifactId>
 			<groupId>org.jenkins-ci.main</groupId>
